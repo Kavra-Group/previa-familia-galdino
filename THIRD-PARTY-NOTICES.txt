@@ -1,0 +1,45 @@
+Avisos de terceiros deste site (cópia de THIRD-PARTY-NOTICES.md da obra, servida junto com o site).
+
+# Peças de terceiros
+
+## React Bits
+
+Origem: https://github.com/DavidHDev/react-bits (cópia local da Kavra em `research/react-bits/repo/`, BrainX, commit `e1bbb696`).
+Licença: **MIT + Commons Clause**, Copyright (c) 2026 David Haz. Pode ser usada como parte deste site; **não** pode ser vendida, sublicenciada nem redistribuída como componente (sozinha, em pacote ou portada).
+
+Aviso da licença (obrigatório em toda cópia):
+
+> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, and distribute the Software as part of an application, website, or product, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Commons Clause Restriction: You may use this Software, including for any commercial purpose, so long as you do not sell, sublicense, or redistribute the components themselves-whether alone, in a bundle, or as a ported version. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+
+| Peça | Arquivo nesta obra | Origem | Alterações (detalhe no topo de cada arquivo) |
+|---|---|---|---|
+| ScrollVelocity | `src/components/reactbits/ScrollVelocity.tsx` | `TextAnimations/ScrollVelocity/ScrollVelocity.tsx` | prop nova `paused`; `<section>` → `<div>`; cópias `aria-hidden`; letra dos tokens, sem sombra; `VelocityText` fora do componente (não remonta ao pausar); `m.div` no lugar de `motion.div` |
+| JellyRadio | `src/components/reactbits/JellyRadio.tsx` | `Micro/JellyRadio/JellyRadio.tsx` | anel de foco reposto; tamanho `lg` com letra de 20 px e respiro de 14 px; pode começar sem ficha escolhida; aperto 0,98 e tempos 100/200 ms; `aria-labelledby`; `m.button` no lugar de `motion.button` |
+| Counter | `src/components/reactbits/Counter.tsx` | `Components/Counter/Counter.tsx` | degradê só com `gradientHeight` > 0; `m.span` no lugar de `motion.span` |
+| EchoText | `src/components/reactbits/EchoText.tsx` | `TextAnimations/EchoText/EchoText.tsx` | entrelinha 0,95 e sem espaçamento negativo; sem sombra de texto; `CSSProperties` importado como tipo |
+
+## Fontes
+
+| Família | Pacote | Versão | Licença | Uso |
+|---|---|---|---|---|
+| Saira Extra Condensed (Omnibus-Type) | `@fontsource/saira-extra-condensed` (`latin-700`, `latin-800`) | 5.3.0 | SIL Open Font License 1.1 | títulos, botões, números |
+| Saira (Omnibus-Type) | `@fontsource/saira` (`latin-400`, `latin-600`) | 5.3.0 | SIL Open Font License 1.1 | texto corrido e rótulos |
+
+Os arquivos das fontes são servidos pelo próprio site (nenhum pedido ao Google Fonts).
+
+## Bibliotecas
+
+| Nome | Versão | Licença | Para quê |
+|---|---|---|---|
+| motion | 12.43.0 | MIT | animação das peças ScrollVelocity, JellyRadio e Counter |
+| React / React DOM | 19.3 | MIT | ilhas interativas |
+| Astro, @astrojs/react | 7.4 / 7.1 | MIT | gerador do site |
+| Tailwind CSS | 4.3 | MIT | estilos (paleta padrão desligada; só os tokens de `design/tokens.yaml`) |
+| sharp | 0.35.5 | Apache-2.0 | recorte do ícone (monograma FG) no build; não vai para o navegador |
+
+## Vídeo
+
+| Ferramenta | Uso | Licença |
+|---|---|---|
+| HyperFrames (HeyGen) | montagem e render do vídeo de abertura (`video/`) | Apache-2.0 |
+| FFmpeg 9.0.2 (build gyan.dev) | codificação do vídeo, só na máquina de quem renderiza; não vai no site | GPL-3.0 |
